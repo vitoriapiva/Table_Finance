@@ -1,0 +1,27 @@
+
+#box{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0.25rem;
+}
+
+#form {
+    background: #dde0e4;
+    padding: 2.4rem;
+    position: relative;
+  
+    max-width: 500px;
+    width: 90%;
+}

@@ -1,38 +1,256 @@
-.App {
-  text-align: center;
+/* GLOBAL */ 
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 93.75%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #eeeaea;
+  font-family: 'poppins' , sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  background-color: #FF0000;
+}
+
+.container { 
+  width: min(90vw, 800px);
+
+  margin: auto;
+}
+
+/* TITLES */ 
+
+h2 { 
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: #363f5f;
+
+  font-weight: normal;
+}
+
+/* LINKS E BUTTONS  */
+
+.buttonText {
+  color: #49aa26;
+  text-decoration: none;
+  font-weight: bold;
+
+  display: inline-block;
+  margin-bottom: -8rem;
+  border: none;
+}
+
+.buttonText:hover {
+  color: #3dd705;
+}
+
+.buttonSave {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+
+  color: white;
+  background: #49aa26;
+
+  padding: 0;
+
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
+
+.buttonSave:hover {
+  background: #3dd705;
+}
+
+.buttonCancel {
+  color: #FF0000;
+  border: 2px solid;
+  border-radius: 0.25rem;
+  background-color: white;
+  height: 50px;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+
+  opacity: 0.6;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonCancel:hover {
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* HEADER */ 
+header {
+  padding: 2rem 2rem 6rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 100;
+  background-color: #043b04 ;
+  margin-bottom: 1rem;
 }
+
+#logo {
+  color: #ffff;
+}
+
+/* BALANCE */
+#section-balance {
+  margin-top: -5.5rem;
+}
+
+/* CARDS */ 
+.cart {
+  background-color: #ffff;
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: #363f5f;
+  
+
+}
+
+.cart h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart p {
+  font-size: 2rem;
+  line-height: 1,2rem;
+}
+
+.cart.total {
+  background-color: #0dc40d;
+  color: #ffff;
+}
+#section-balance h2{
+  color:  #ffff;
+  margin-top: 0;
+
+}
+
+/* TRANSAÇÃO */ 
+#transaction {
+  display: block;
+  width: 90%;
+  margin: 4.5rem;
+  margin-bottom: -1.5rem;
+  overflow-x: auto;
+}
+
+#data-table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+}
+
+table td {
+  background-color: #ffff;
+  padding: 1rem 2rem;
+  opacity: 0.9;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+table th {
+  background-color: #ffff;
+  color:#363f5f;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+  border-radius: 1rem 0 0 1rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+  border-radius: 0 1rem 1rem 0;
+}
+
+td.description {
+  color: #363f5f;
+}
+
+
+/* FORM */ 
+#form {
+   max-width: 500px;
+}
+
+#form h2 {
+   margin-top: 0;
+}
+
+input {
+  border: none;
+  border-radius: 0.2rem;
+
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.input-group {
+   margin-top: 0.8rem;
+}
+
+p {
+  font-size: 11px;
+  opacity: 0.4;
+}
+
+.input-group.action {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.input-group.action .button,
+.input-group.action button {
+   width: 48%;
+
+}
+/* FOOTER */ 
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+} 
+
+/* RESPONSIVIDADE */ 
+
+@media (min-width: 800px) {
+  html {
+      font-size: 87.5%;
+  }
+
+  #section-balance {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 2rem;
+  }
+} 
